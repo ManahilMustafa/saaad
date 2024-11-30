@@ -1,0 +1,263 @@
+/* .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+/* .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+} */
+
+.card {
+  width: 350px;
+  height: 480px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(179, 178, 178, 0.1);
+  transition: transform 0.3s ease;
+}
+.card-content img{
+  width: 80%;
+  height: 80%;
+  
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.card-content {
+  object-fit: cover;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: baseline;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  border-radius: 1rem;
+  height: 280px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  margin-top: 18px;
+  margin-left: 35px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay button {
+  padding: 10px 20px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+  background-color: #444;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.tooltip {
+  width: 300px;
+  min-height: 100px; /* Set a minimum height */
+  position: absolute;
+  top: 50%; /* Adjust as needed */
+  left: 51%;
+  transform: translateX(20px); /* Offset tooltip from the card */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 10;
+  overflow-wrap: break-word;
+  height: auto; /* Allows the box to grow dynamically */
+  max-width: 250px; /* Optional: limits max width to avoid breaking layout */
+}
+.tooltip-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits well in the circle */
+  margin-bottom: 10px;
+}
+
+/* Tooltip does not overflow out of the page */
+.card.rightmost .tooltip {
+  left: auto;
+  right: 20px; /* Align tooltip within the page */
+  transform: none;
+}
+
+/* Optional: Modify button style inside tooltip */
+.app {
+  padding: 8px;
+  border-radius: 15px;
+  background-color: #333;
+  color: white;
+  font-size: small;
+  margin-top: 10px;
+}
+
+.closing {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tooltip h4 {
+  margin-bottom: 10px;
+}
+
+.tooltip p {
+  justify-content: center;
+  color: #333;
+  margin-bottom: 12px;
+
+}
+/* Existing Styles... */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 9; /* Ensure it's below the tooltip */
+  backdrop-filter: blur(5px); /* Optional: Adds a slight blur to the background */
+}
+
+.tooltip-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 10; /* Above the lightbox */
+  width: 350px;
+  max-width: 90%;
+  text-align: center; /* Center all content */
+}
+
+
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+
+  .tooltip {
+    width: 300px;
+    height: auto;
+    top: 40%; /* Position tooltip below */
+    left: -40%;
+    transform: translateX(0); /* Remove horizontal translation */
+  }
+  .closing {
+    margin-top: 10px;
+    margin-left: 190px;
+    margin-bottom: -50px;
+    border-radius: 30px;
+    background-color: #333;
+    color: white;
+  }
+
+  .card.rightmost .tooltip {
+    right: 0; /* Keep tooltip inside the page on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 350px;
+    height: 510px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(179, 178, 178, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .tooltip {
+    width: 180px;
+    padding: 10px;
+  }
+  .closing {
+    margin-top: -80px;
+    margin-left: 170px;
+    margin-bottom: -50px;
+    border-radius: 30px;
+    background-color: #333;
+    color: white;
+  }
+}
+@media(max-width:375px){
+  .card {
+    width: 330px;
+    height: 510px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(179, 178, 178, 0.1);
+    transition: transform 0.3s ease;
+  }
+}
+@media screen and (max-width: 320px) {
+  .overlay {
+    width: 225px;
+    height: 233px;
+  }
+  .tooltip {
+    width: 272px;
+   left: 7%;
+  }
+  .closing {
+    margin-top: 3px;
+  }
+  .tooltip-modal {
+    width: 200px;
+    padding: 10px;
+  }
+  .card{
+    width: 250px;
+    height: 280px;
+  }
+}

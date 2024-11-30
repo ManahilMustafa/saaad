@@ -1,0 +1,98 @@
+/* General Section Styling */
+.section {
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section__title {
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+  }
+  
+  .section__subtitle {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+  }
+  
+  /* Skills Grid Layout */
+  .skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .skills__data {
+    width: 100%;
+  }
+  
+  .skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills__name {
+    font-size: 1rem;
+    color: var(--title-color);
+  }
+  
+  .skills__number {
+    font-size: 1rem;
+    color: var(--title-color);
+  }
+  
+  /* Progress Bar Styles */
+  .skills__bar {
+    position: relative;
+    height: 8px; /* Increased height for better visibility */
+    background-color: rgb(201, 197, 197);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .skills__percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  /* Skill specific progress width */
+  .skills__photoshop {
+    width: 90%;
+  }
+  
+  .skills__html5 {
+    width: 95%;
+  }
+  
+  .skills__wordpress {
+    width: 70%;
+  }
+  
+  .skills__jquery {
+    width: 85%;
+  }
+  
+  .skills__css3 {
+    width: 90%;
+  }
+  
+  .skills__seo {
+    width: 80%;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .skills__container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
+  

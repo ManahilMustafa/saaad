@@ -1,0 +1,120 @@
+.about__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Keeps first and last boxes aligned */
+ 
+}
+
+.about__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+    gap: 1.5rem; 
+
+}
+
+.about__box {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 120%;
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    transition: 0.4s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -10px; /* Negative margin brings boxes closer */
+}
+
+.about__box:hover {
+    background-color: #191919; 
+    color: #fff; 
+    transform: translateY(-5px); /* animate up instead of down */
+}
+
+.about__icon {
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
+    color: #191919; 
+    transition: color 0.4s ease; 
+}
+
+
+.about__box:hover .about__icon {
+    color: #fff; 
+}
+
+
+.about__title {
+    font-size: 1.6rem; 
+    font-weight: 600; 
+}
+.about__box:hover .about__title {
+    color: #fff;
+}
+
+.about__subtitle {
+    font-size: 1rem; 
+    margin-top: 0.5rem; 
+}
+
+
+.about__description {
+    padding: 0 2rem 0 0;
+    margin-bottom: var(--mb-2-5);
+    text-align: center;
+    justify-content: center;
+  
+}
+@media screen and (max-width: 992px) {
+.about__container {
+    grid-template-columns: 1fr;
+}
+.about__box {
+    background-color: var(--container-color); /* Ensure the box style stays consistent */
+        padding: 1.5rem 1rem; /* Add some padding to make it more spaced out */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Border similar to larger screens */
+        border-radius: 0.75rem;
+        text-align: center;
+}
+.about__data {
+    text-align: center;
+}
+.about__info {
+    justify-content: center;
+        padding-top: 2rem;
+}
+.about__description {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+}
+}
+@media screen and (max-width: 768px)
+{
+    .about__info {
+        grid-template-columns: repeat(2, 1fr); /* Display two boxes per row */
+        gap: 1.5rem; /* Add space between grid items */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about__info {
+        grid-template-columns: repeat(2, 1fr); /* Display two boxes per row */
+        gap: 1rem; /* Add space between grid items */
+    }
+    .about__description {
+        padding: 0 1rem; /* Add some padding for smaller screens */
+    }
+}
+@media screen and (max-width: 350px) {
+    .about__info {
+        grid-template-columns: 1fr; /* Stack boxes in a single column */
+        gap: 1rem; /* Keep spacing between the boxes */
+    }
+    .about__description {
+        padding: 0 0.5rem; /* Reduce padding for very small screens */
+    }
+}
