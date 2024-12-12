@@ -62,7 +62,7 @@ const Contact = () => {
               <input type="email" placeholder="Enter your email address" name='email' required />
               <input type="phone" placeholder="Enter your phone number" name='number' />
               <textarea placeholder="Enter Your Message" name='message' required></textarea>
-              <button type="submit">Send message</button>
+              <button type="submit">Send Message</button>
             </form>
           </div>
         </div>
