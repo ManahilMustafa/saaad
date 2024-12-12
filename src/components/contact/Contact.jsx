@@ -42,12 +42,14 @@ const Contact = () => {
         <div className="contact-container">
           <div className="contact-header">
             <h1>Let’s Connect and Bring Your Idea to Life!</h1>
-            <p>Have a question, a project idea, or just want to chat? I’m here to create high-quality, user-friendly apps designed to meet your needs perfectly.</p>
+            <p>Have a project idea, a question, or just want to chat? I’m here to create high-quality, user-friendly apps designed to meet your needs perfectly. </p>
             <h3>Why Choose Me?</h3>
             <ul>
               <li>✔ User-Centric Design.</li>
               <li>✔ Clear Communication.</li>
-              <li>✔ On-Time Project Delivery.</li>
+              <li>✔ High-Quality Code</li>
+              <li>✔ End-to-End Service</li>
+              <li>✔ On-Time Project Delivery</li>
               <li>✔ Dedicated Post-Launch Support.</li>
             </ul>
           </div>
@@ -59,7 +61,7 @@ const Contact = () => {
               </div>
               <input type="email" placeholder="Enter your email address" name='email' required />
               <input type="phone" placeholder="Enter your phone number" name='number' />
-              <textarea placeholder="Your message" name='message' required></textarea>
+              <textarea placeholder="Enter Your Message" name='message' required></textarea>
               <button type="submit">Send message</button>
             </form>
           </div>

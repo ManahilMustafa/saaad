@@ -59,6 +59,10 @@
 .about__subtitle {
     font-size: 1rem; 
     margin-top: 0.5rem; 
+    color: black;
+}
+.about__box:hover .about__subtitle {
+    color: #fff;
 }
 
 
